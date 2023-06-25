@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>New Blood</title>
+  <link rel ="stylesheet" href="css/user.css">
+</head>
+<body>
+<div class="form">
+  <form method="post" action="/bloodList/newBlood" th:object="${newBloodReq}">
+    <h2>New Blood</h2>
+    <div class="select-menu">
+      <label for="bloodgroup">Blood Group:</label>
+      <select name="bloodGroup" id="Bloodgroup" required>
+        <option value="">Please choose your blood group</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="0+">0+</option>
+        <option value="0-">0-</option>
+      </select>
+    </div>
+
+    <div class="select-menu">
+      <label for="bloodBank">Blood Bank:</label>
+      <select name="bloodBank" id="bloodBank" required>
+        <option value="">Please choose your blood bank</option>
+        <option value="Alsancak Nevvar Salih İşgören Devlet Hastanesi">Alsancak Nevvar Salih İşgören Devlet Hastanesi</option>
+        <option value="Buca Seyfi Demirsoy Devlet Hastanesi,">Buca Seyfi Demirsoy Devlet Hastanesi</option>
+        <option value="Dr. Behçet Uz Çocuk Hastanesi">Dr. Behçet Uz Çocuk Hastanesi</option>
+        <option value="Karşıyaka Devlet Hastanesi">Karşıyaka Devlet Hastanesi</option>
+        <option value="Menemen Devlet Hastanesi">Menemen Devlet Hastanesi</option>
+        <option value="Foça Devlet Hastanesi">Foça Devlet Hastanesi</option>
+        <option value="Tepecik Eğitim ve Araştırma Hastanesi">Tepecik Eğitim ve Araştırma Hastanesi</option>
+        <option value="Urla Devlet Hastanesi">Urla Devlet Hastanesi</option>
+        <option value="Selçuk Devlet Hastanesi">Selçuk Devlet Hastanesi</option>
+        <option value="Aliağa Devlet Hastanesi">Aliağa Devlet Hastanesi</option>
+
+      </select>
+    </div>
+
+
+    <div class="input-box">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <input type="text" name="bloodDsc" placeholder="Desc" required>
+    </div>
+
+
+    <div class="input-box">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <input type="date" name="bloodDate" placeholder="Date" required>
+    </div>
+    <div class="input-box">
+      <input type="submit" name="sign-in" value="Become Donor">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

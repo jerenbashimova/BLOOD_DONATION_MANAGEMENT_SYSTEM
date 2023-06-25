@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Blood List</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class ="container">
+  <div class = "row">
+    <h1> Blood List </h1>
+  </div>
+
+  <div class = "row">
+    <div class = "col-lg-3">
+      <a th:href = "@{/addBlood}" class = "btn btn-primary btn-sm mb-3"> Add Blood</a>
+      <a th:href = "@{/admin-home}" class = "btn btn-primary btn-sm mb-3"> Home</a>
+    </div>
+  </div>
+  <table class = "table table-striped table-bordered">
+    <thead class = "table-dark">
+    <tr>
+      <th> Blood Group </th>
+      <th> Blood Banks </th>
+      <th> Blood Description </th>
+      <th> Blood Date </th>
+      <th> Actions </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each = "blood: ${bloodList}">
+      <td th:text = "${blood.bloodGroup}"></td>
+      <td th:text = "${blood.bloodBank}"></td>
+      <td th:text = "${blood.bloodDsc}"></td>
+      <td th:text = "${blood.bloodDate}"></td>
+
+      <td>
+        <a th:href = "@{/bloodList/edit/{id}(id=${blood.id})}"
+           class = "btn btn-primary">Update</a>
+
+        <a th:href = "@{/bloodList/{id}(id=${blood.id})}"
+           class = "btn btn-danger">Delete</a>
+
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
+
+</div>
+</body>
+</html>

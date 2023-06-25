@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Update Blood</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Update Blood</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</nav>
+<br>
+<br>
+<div class = "container">
+  <div class = "row">
+    <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+      <h1 class = "text-center"> Update Blood </h1>
+      <div class = "card-body">
+        <form th:action="@{/bloodList/{id} (id=${blood.id})}" th:object = "${blood}" method="POST">
+          <div class ="form-group">
+            <label> Blood Group </label>
+            <input
+                    type = "text"
+                    name = "bloodGroup"
+                    th:field = "*{bloodGroup}"
+                    class = "form-control"
+                    placeholder="Enter Blood Group"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Blood Bank </label>
+            <input
+                    type = "text"
+                    name = "bloodBank"
+                    th:field = "*{bloodBank}"
+                    class = "form-control"
+                    placeholder="Enter Blood Bank"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Blood Description </label>
+            <input
+                    type = "text"
+                    name = "bloodDsc"
+                    th:field = "*{bloodDsc}"
+                    class = "form-control"
+                    placeholder="Enter Blood Description"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Blood Date </label>
+            <input
+                    type = "date"
+                    name = "bloodDate"
+                    th:field = "*{bloodDate}"
+                    class = "form-control"
+                    placeholder="Enter Blood Date"
+            />
+          </div>
+
+
+          <div class = "box-footer">
+            <button type="submit" class = "btn btn-primary">
+              Submit
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Popins',sans-serif;
+}
+body{
+    background-image: url("https://img.freepik.com/premium-vector/vector-drops-red-blood-drops-drops-blood-red-paint-blood-surface-realistic-drops_156846-1904.jpg?w=1800");
+    background-size: cover;
+    background-position: center;
+    height:100vh ;
+    display: flex;
+    flex-direction: column;
+}
+.error-page{
+    position: absolute;
+    top: 10%;
+    left: 17%;
+    right: 17%;
+    bottom: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+.error-page .content{
+    max-width: 600px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.content h1{
+    font-size: 18vw;
+    line-height: 1em;
+    color: darkred;
+ 
+
+}
+.content h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: darkred;
+    max-width: 600px;
+    font-size: 2em;
+}
+.content .buttons a{
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid darkred;
+    color: darkred;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.content .buttons a:hover{
+    color: #fff;
+    background: darkred;
+}
